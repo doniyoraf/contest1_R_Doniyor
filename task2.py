@@ -7,7 +7,7 @@ def typeBasedTransformer(**argumentlar):
         elif isinstance(qiymat, str):
             ozgartirdim[kalit] = qiymat[::-1]
         elif isinstance(qiymat, (int, float)):
-            ozgartirdim[kalit] = value ** 2
+            ozgartirdim[kalit] = qiymat ** 2
         elif isinstance(qiymat, (list, tuple)):
             ozgartirdim[kalit] = qiymat[::-1]
         elif isinstance(qiymat, dict) and len(set(qiymat.values())) == len(qiymat.values()):
