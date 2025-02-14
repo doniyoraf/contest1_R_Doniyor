@@ -1,18 +1,18 @@
 def typeBasedTransformer(**kwargs):
-    transformed = {}
+    ozgargan = {}
     
-    for key, value in kwargs.items():
-        if isinstance(value, (int, float)):
-            transformed[key] = value ** 2
-        elif isinstance(value, str):
-            transformed[key] = value[::-1]
-        elif isinstance(value, bool):
-            transformed[key] = not value
-        elif isinstance(value, (list, tuple)):
-            transformed[key] = value[::-1]
-        elif isinstance(value, dict) and len(set(value.values())) == len(value.values()):
-            transformed[key] = {v: k for k, v in value.items()}
+    for kalit, qiymat in kwargs.items():
+        if isinstance(qiymat, (int, float)):
+            transformed[kalit] = value ** 2
+        elif isinstance(qiymat, str):
+            transformed[kalit] = qiymat[::-1]
+        elif isinstance(qiymat, bool):
+            transformed[kalit] = not qiymat
+        elif isinstance(qiymat, (list, tuple)):
+            transformed[kalit] = qiymat[::-1]
+        elif isinstance(qiymat, dict) and len(set(qiymat.values())) == len(qiymat.values()):
+            ozgargan[kalit] = {v: k for k, v in qiymat.items()}
         else:
-            transformed[key] = value
+            ozgargan[kalit] = qiymat
             
-    return transformed
+    return ozgargan
