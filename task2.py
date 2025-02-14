@@ -1,5 +1,4 @@
 def typeBasedTransformer(**kwargs):
-    """Transforms values based on their data type."""
     transformed = {}
     
     for key, value in kwargs.items():
@@ -14,6 +13,6 @@ def typeBasedTransformer(**kwargs):
         elif isinstance(value, dict) and len(set(value.values())) == len(value.values()):
             transformed[key] = {v: k for k, v in value.items()}
         else:
-            transformed[key] = value  # Leave unsupported types unchanged
-
+            transformed[key] = value
+            
     return transformed
